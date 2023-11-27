@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#nav-links > a::after {
+	content: "";
+	width: 20px;
+	height: 4px;
+	position: absolute;
+	bottom: -28px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 5px 5px 0 0;
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+#nav-links > a:hover::after {
+	opacity: 1;
+}
+
+#tempgrad {
+	background-color: hsla(0, 100%, 50%, 0);
+	background-image: radial-gradient(at 100% 1%, hsla(242, 91%, 29%, 1) 0px, transparent 50%),
+		radial-gradient(at 99% 71%, hsla(298, 78%, 37%, 1) 0px, transparent 50%),
+		radial-gradient(at 100% 100%, hsla(322, 28%, 61%, 1) 0px, transparent 50%);
+}
+
+#about {
+	background-image: radial-gradient(at 75.1% 27.7%, #391666 0px, transparent 50%), radial-gradient(at 80.8% 72%, #d848e08c 0px, transparent 50%),
+		radial-gradient(at -2.7% 90%, #250e43 0px, transparent 50%);
+}
+
+::-webkit-scrollbar {
+	background-color: purple;
+	width: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: white;
+	border-radius: 10px;
+}
